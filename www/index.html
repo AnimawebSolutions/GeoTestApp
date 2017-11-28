@@ -1,1 +1,54 @@
-asd
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>GeoApp</title>
+    <!-- estilos -->
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/maximage/jquery.maximage.min.css" rel="stylesheet">
+    <link href="css/leaflet.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- cargamos ionic -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/angular-messages.min.js"></script>
+    <!-- cargamos cordova -->
+    <script src="lib/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+    <!-- cargamos leaflet -->
+    <script src="lib/leaflet/leaflet.js"></script>
+    <script src="lib/leaflet/angular-leaflet-directive.js"></script>
+    <!-- cargamos cartodb -->
+    <script src="lib/cartodb/cartodb.js"></script>
+    <!-- cargamos d3js -->
+    <script src="lib/d3/d3.v3.min.js"></script>
+    <!-- cargamos maximage -->
+    <script src="lib/maximage/jquery.maximage.min.js"></script>
+    <script src="lib/maximage/jquery.cycle.all.min.js"></script>
+    <!-- cargamos angular-mocks -->
+    <script src="lib/angular-mocks/angular-mocks.js"></script>
+    <!-- cargamos los controladores de la aplicación -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers/appController.js"></script>
+    <script src="js/controllers/loginController.js"></script>
+    <script src="js/controllers/mapController.js"></script>
+    <!-- cargamos los servicios de la aplicación -->
+    <script src="js/services/services.js"></script>
+    <script src="js/services/mapsServices.js"></script>
+    <script src="js/services/angular-catastro-style.js"></script>
+    <!-- cargamos las directivas de la aplicación -->
+    <script src="js/directives/resetField.js"></script>
+    <!-- cargamos los filtros de la aplicación -->
+    <script src="filters/filters.js"></script>
+    <!-- cargamos las constantes de la aplicación -->
+    <script src="js/constants/constants.js"></script>
+    <!-- cargamos la API de MADIVA -->
+    <script src="lib/madiva/apiMadiva.js"></script>
+</head>
+
+<body ng-app="starter" ng-controller="appController">
+    <ion-nav-view></ion-nav-view>
+</body>
+
+</html>
