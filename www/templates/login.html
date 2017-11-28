@@ -1,0 +1,44 @@
+<ion-view>
+    <ion-content class="verticalScroll">
+        <div id="maximage">
+            <img src="img/background.jpg" alt="" />
+        </div>
+        <div class="logo">
+            <img src="img/logo.png" alt="" />
+        </div>
+        <form ng-submit="login(data)">
+            <div class="list padding transparent">
+                <label class="item item-input">
+                    <i class="icon ion-ios-person-outline"></i>
+                    <input placeholder="Usuario" type="text" ng-model="data.username">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-ios-locked-outline"></i>
+                    <input placeholder="Contraseña" type="password" ng-model="data.password">
+                </label>
+            </div>
+            <div class="padding">
+                <button class="button button-login" type="submit">Iniciar sesión ></button>
+                <p class="text-center forgot">
+                    <a ng-click="forgotPassword()">Olvide mi contraseña</a>
+                </p>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
+<!-- Ventanas modales de la aplicacion -->
+<script id="modalForgot.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-madiva">
+            <h1 class="title">Recuperar contraseña</h1>
+            <button class="button button-icon icon ion-ios-close-outline" ng-click="modalForgot.hide()"></button>
+        </ion-header-bar>
+        <ion-content>
+            <center>
+                <br/>
+                <img src="img/prueba.jpg"></img>
+                <h3>Estamos trabajando en ello</h3>
+            </center>
+        </ion-content>
+    </ion-modal-view>
+</script>

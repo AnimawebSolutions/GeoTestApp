@@ -1,0 +1,83 @@
+<ion-view title="Geo App">
+    <form ng-submit="searchAddress()">
+        <ion-header-bar ng-if="dataSearch.load" ng-show="dataSearch.show" class="bar bar-subheader item-input-inset">
+            <input id="searchKey" type="search" placeholder="Dirección completa" ng-model="dataSearch.address" autocorrect="off" reset-field focusMe autofocus>
+            <button class="button button-clear" type="submit">Buscar</button>
+        </ion-header-bar>
+    </form>
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" ng-click="dataSearch.show=false" class="button button-icon icon ion-ios-settings"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button ng-click="showSearch()" class="button button-icon icon ion-ios-search"></button>
+        <button ng-click="getCurrentPosition();" class="button button-icon icon ion-ios-navigate-outline"></button>
+    </ion-nav-buttons>
+    <ion-content data-tap-disabled="true">
+        <leaflet id="map" ng-show="netReady" controls="controls" event-broadcast="events" center="center" layers="layers" defaults="options" legend="legend" tiles="tiles" markers="markers"></leaflet>
+        <div ng-hide="netReady" class="verticalScroll">
+            <div class="row scroll">
+                <div class="col text-center">
+                    <h4>Lo sentimos, pero actualmente no esta conectado a ninguna red de datos, por favor conectese a cualquier red para poder usar la aplicación correctamente...</h4>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="bar-madiva">
+        <span class="copy">© Copyright 2016 - MADIVA</span>
+    </ion-footer-bar>
+</ion-view>
+<!-- Ventanas modales de la aplicacion -->
+<script id="modalDetail.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-madiva">
+            <h1 class="title">Detalle del inmueble</h1>
+            <button class="button button-icon icon ion-ios-close-outline" ng-click="modalDetail.hide()"></button>
+        </ion-header-bar>
+        <ion-content>
+            <div class="card">
+                <div class="item item-divider">DATOS DEL INMUEBLE</div>
+                <div class="item item-text-wrap">
+                    <div class="row" ng-repeat="property in propertiesDetail">
+                        <div class="col indiceTabla">{{property.indice}}:</div>
+                        <div class="col valorTabla">{{property.valor}}</div>
+                    </div>
+                </div>
+                <div class="item item-divider">DATOS ECONÓMICOS</div>
+                <div class="item item-text-wrap">
+                    <div class="row" ng-repeat="economic in economicsDetail">
+                        <div class="col indiceTabla">{{economic.indice}}:</div>
+                        <div class="col valorTabla">{{economic.valor}}</div>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>
+<script id="searchDetail.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-madiva">
+            <h1 class="title">Resultados de la búsqueda</h1>
+            <button class="button button-icon icon ion-ios-close-outline" ng-click="modalSearch.hide()"></button>
+        </ion-header-bar>
+        <ion-content>
+            <div id="noResult" class="verticalScroll" ng-hide="itemsSearch.length>0">
+                <div class="row scroll">
+                    <div class="col text-center">
+                        <h4>Lo sentimos, pero no hay resultados</h4>
+                        <h4>que coincidan con su búsqueda...</h4>
+                        <button class="button button-madiva" ng-click="modalSearch.hide()">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list" ng-show="itemsSearch.length>0">
+                <a class="item item-thumbnail-left" href="#" ng-click="posicionaMapa({{item.lat}},{{item.lon}})" ng-repeat="item in itemsSearch">
+                    <img ng-src="{{item.staticImage}}">
+                    <h2>{{item.display_name}}</h2>
+                    <p>País: {{item.address.country}}</p>
+                    <p>Provincia: {{item.address.state}}</p>
+                    <p><span ng-show="item.address.county">Situación: </span><span ng-show="!item.address.county && item.address.postcode">C.P.: </span>{{item.address.county}}<span ng-show="item.address.postcode">,</span> {{item.address.postcode}}</p>
+                </a>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>
