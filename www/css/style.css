@@ -1,0 +1,391 @@
+/* Generales */
+
+body {
+    height: auto;
+    min-height: 100%;
+}
+
+.scroll,
+.angular-leaflet-map {
+    height: 100%;
+}
+
+.leaflet-bottom {
+    bottom: 10px;
+}
+
+.item.item-body p {
+    margin-top: 0;
+}
+
+.tabs.border-top {
+    border-top: 1px solid #ddd !important;
+}
+
+.bar.bar-madiva {
+    color: #fff;
+    border-color: #d55014;
+    background-color: #ec6629;
+    background-image: linear-gradient(0deg, #d55014, #d55014 50%, transparent 50%);
+}
+
+.bar-madiva .button {
+    color: #fff;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.bar-madiva .title {
+    color: #FFF;
+}
+
+.bar.bar-menuMadiva {
+    color: #fff;
+    border-color: #d55014;
+    background-color: #d55014;
+    -webkit-box-shadow: 0px 5px 12px -2px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 0px 5px 12px -2px rgba(0, 0, 0, 0.36);
+    box-shadow: 0px 5px 12px -2px rgba(0, 0, 0, 0.36);
+}
+
+.bar-menuMadiva .title {
+    color: #fff;
+}
+
+.copy {
+    width: 100%;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.txtRight {
+    text-align: right;
+}
+
+
+/* Login */
+
+.logo {
+    margin-bottom: 40px;
+}
+
+.verticalScroll {
+    width: 100% !important;
+    height: 100% !important;
+    display: table !important;
+}
+
+.verticalScroll .scroll {
+    text-align: center !important;
+    display: table-cell !important;
+    vertical-align: middle !important;
+}
+
+.button-login {
+    width: 70%;
+    color: #FFF;
+    margin-top: 5px;
+    border-color: #FFF;
+    background-color: transparent;
+}
+
+.forgot a {
+    top: 20px;
+    color: #FFF;
+    position: relative;
+    text-decoration: none;
+}
+
+.transparent .item {
+    width: 70%;
+    border: none;
+    padding-left: 5px;
+    margin: 0px auto 0px auto;
+    border-bottom: 1px solid #FFF;
+    background-color: transparent !important;
+}
+
+.transparent i {
+    color: #FFF;
+    font-size: 26px;
+    margin-right: 15px;
+}
+
+.transparent input[type="text"],
+.transparent input[type="password"] {
+    color: #FFF !important;
+}
+
+
+/* Resultados de la busqueda */
+
+#noResult button {
+    margin-top: 20px;
+}
+
+
+/* Estilos de los PopUp */
+
+.popup-container .popup {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.popup-head {
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #EB6528;
+}
+
+.popup-head h3 {
+    color: #FFF;
+}
+
+
+/* Input text */
+
+#searchKey {
+    width: 100%;
+    height: 31px;
+    border-radius: 5px;
+    background: #EEEEEE;
+    -moz-border-radius: 5px;
+    margin: 6px 10px 6px 0px;
+    padding: 0px 20px 0px 20px;
+    -webkit-border-radius: 5px;
+}
+
+.reset-field-icon {
+    top: 13px;
+    right: 90px;
+    margin: 0px;
+    color: #bbb;
+    position: absolute;
+}
+
+
+/* Legenda del mapa */
+
+.legend {
+    color: #555;
+    padding: 6px 8px;
+    line-height: 18px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.legend .outline {
+    float: left;
+    opacity: 0.4;
+}
+
+.legend .info-label {
+    display: table;
+    margin: 0px 10px 5px 0px;
+}
+
+.legend i {
+    width: 18px;
+    float: left;
+    height: 18px;
+    opacity: 0.7;
+    margin-right: 8px;
+}
+
+
+/* PopUp Info Mapa */
+
+#popupInfo {
+    color: #808080;
+    min-width: 300px;
+}
+
+#popupInfo #cabeceraInfo {
+    text-align: center;
+}
+
+#popupInfo #cabeceraInfo h4 {
+    font-weight: bold;
+    margin: 0px !important;
+    font-size: 12px !important;
+}
+
+#popupInfo #cabeceraInfo h5 {
+    color: #808080;
+    margin-top: 3px;
+    font-style: italic;
+    font-size: 10px !important;
+}
+
+#caracteristicasInfo .listas {
+    top: 10px;
+    padding: 0px;
+    list-style: none;
+    position: relative;
+    margin: 0px 0px 20px 0px;
+}
+
+#caracteristicasInfo .listas li {
+    margin-bottom: 5px;
+}
+
+#caracteristicasInfo .listas li i {
+    color: #ec6629;
+    font-size: 11px;
+    margin-right: 6px;
+}
+
+#popupInfo #centralInfo #mapaInfo {
+    float: right;
+    stroke: #111;
+    fill-opacity: 0.2;
+    stroke-width: 1px;
+}
+
+#popupInfo #centralInfo #caracteristicasInfo .listas {
+    top: 10px;
+    position: relative;
+}
+
+#popupInfo #pieInfo {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.button-madiva {
+    color: #fff;
+    border-color: #d55014;
+    background-color: #ec6629;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+    padding: 5px 20px 0 0 !important;
+}
+
+
+/* Detalle del inmueble */
+
+.indiceTabla {
+    font-weight: bold;
+}
+
+.valorTabla {
+    text-align: right;
+}
+
+
+/* Side Menu */
+
+.sidemenuMadiva {
+    background: #4B5054;
+}
+
+.sidemenuMadiva .item {
+    background: #4B5054;
+}
+
+.sidemenuMadiva .avatarMadiva {
+    color: #eaeaea;
+    display: block;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.sidemenuMadiva .avatarMadiva div {
+    padding-bottom: 3px;
+}
+
+.sidemenuMadiva .listaSidemenu ion-item {
+    color: #eaeaea;
+    background: #4B5054;
+}
+
+.sidemenuMadiva .listaSidemenu .item {
+    border-color: #6a7075;
+}
+
+.sidemenuMadiva .listaSidemenu .item i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.sidemenuMadiva .listaSidemenu .active {
+    background: #33373A;
+    border-left: 10px solid #EC6629;
+}
+
+.sidemenuMadiva .cerrarMadiva {
+    color: #eaeaea;
+}
+
+.sidemenuMadiva .cerrarMadiva span {
+    top: 5px;
+    position: relative;
+}
+
+.sidemenuMadiva .cerrarMadiva button {
+    color: #eaeaea;
+    font-size: 14px;
+    min-height: 26px;
+    line-height: 26px;
+    background: #33373A;
+}
+
+
+/* Colores del mapa */
+
+#mapaInfo path.PI {
+    fill: #02f6ff;
+}
+
+#mapaInfo path.ETQ {
+    fill: #31bbfb;
+}
+
+#mapaInfo path.TEN {
+    fill: #f91b1b;
+}
+
+#mapaInfo path.JD {
+    fill: #429931;
+}
+
+#mapaInfo path.YJD {
+    fill: #429931;
+}
+
+#mapaInfo path.FUT {
+    fill: #00ff3c;
+}
+
+#mapaInfo path.ZD {
+    fill: #00ff3c;
+}
+
+#mapaInfo path.CONS {
+    fill: #fff000;
+}
+
+#mapaInfo path.P {
+    fill: #f7ba91;
+}
+
+#mapaInfo path.SUELO {
+    fill: #FF6600;
+}
+
+#mapaInfo path.TERRENY {
+    fill: #FF6600;
+}
+
+#mapaInfo path.GOLF {
+    fill: #1f6d17;
+}
